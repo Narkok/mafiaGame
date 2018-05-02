@@ -1,0 +1,442 @@
+@font-face 
+{
+    font-family: niagara;
+    src: url(../src/common/niagsol.ttf);
+}
+
+/* style reset */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    cursor: default;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+
+.nos::selection { background: transparent;}
+.nos::-moz-selection {background: transparent;}
+nobr::selection { background: transparent;}
+nobr::-moz-selection {background: transparent;}
+br::selection { background: transparent;}
+br::-moz-selection {background: transparent;}
+p::selection { background: transparent;}
+p::-moz-selection {background: transparent;}
+div::selection { background: transparent;}
+div::-moz-selection {background: transparent;}
+img::selection { background: transparent;}
+img::-moz-selection {background: transparent;}
+
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+/*-------------*/
+
+body
+{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+    font-family: niagara;
+    background-color: black;
+}
+
+.startPage
+{
+	background-color: black;
+  	background-image: url("../src/startPage/background.jpg");
+  	background-size: cover;
+  	background-position: center;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 2s opacity;
+}
+
+.startPage .rain
+{
+	position: absolute;
+	left: -10%;
+	width: 120%;
+	height: 100%;
+}
+
+.startPageBG
+{
+	position: absolute;
+	width: 100%;
+	bottom: -50px;
+}
+
+.startPageLeft
+{
+	position: absolute;
+	width: 26vw;
+	height: 70%;
+	top: 15%;
+	left: 12vw;
+	transition: 1s all;
+}
+
+.startPageLeft .logo
+{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.startLoad
+{
+  width: 32%;
+  height: 210px;
+  position: absolute;
+  bottom: 0;
+  left: 34%;
+  display: block;
+}
+
+.startLoad img
+{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  animation-name: loading;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading 
+{
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.startLoad p
+{
+  width: 100%;
+  position: absolute;
+  display: block;
+  font-size: 50px;
+  height: 50px;
+  bottom: 0;
+  color: white;
+  text-align: center;
+}
+
+.startPageMenu
+{
+  width: calc(100% + 12vw);
+  position: absolute;
+  height: 180px;
+  bottom: 0;
+  transition: 1s all;
+  left: -12vw;
+}
+
+.startMenuButton
+{
+  text-shadow: 0 0 8px black;
+  height: 60px;
+  font-size: 50px;
+  line-height: 60px;
+  padding-left: 12vw;
+  color: white;
+  transition: 0.3s all;
+  z-index: 1;
+  position: absolute;
+}
+
+.startButton1{width: 130px;}
+.startButton2
+{
+  width: 115px;
+  top: 60px;
+  opacity: 0.3;
+}
+.startButton3
+{
+  width: 57px;
+  top: 120px;
+}
+
+.startMenuButtonHoverLine
+{
+  position: absolute;
+  height: 60px;
+  display: block;
+  left: -550px;
+  transition: 0.3s all;
+}
+
+.smbHoverLine2
+{
+  top: 60px;
+}
+.smbHoverLine3
+{
+  top: 120px;
+}
+
+.newGameMenu
+{
+	width: 860px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	transition: 0.7s all;
+	left: calc(50% - 430px);
+}
+
+.newGameMenu .logo 
+{
+	width: 140px;
+	display: block;
+	position: absolute;
+	left: calc(50% - 70px);
+	top: 40px;
+}
+
+.newGameMenuWindow
+{
+	width: 100%;
+	height: 600px;
+	background-color: rgba(0,0,0,0.7);
+	position: absolute;
+	top: calc(50vh - 300px);
+}
+
+.newGameMenuWindow .title 
+{
+	width: 100%;
+	height: 70px;
+	background-color: white;
+}
+
+.titleText
+{
+	font-size: 56px;
+	text-align: center;
+	line-height: 70px;
+}
+
+.title .backButton
+{
+	position: absolute;
+	top: 15px;
+	left: 40px;
+	height: 40px;
+	width: 80px;
+	font-size: 40px;
+	transition: 0.3s all;
+}
+
+.backButton img 
+{
+	height: 100%;
+	float: left;
+  position: absolute;
+  top: 0;
+  left: -20px;
+	margin-right: 10px;
+	transition: 0.3s all;
+}
+
+.backButton:hover img
+{
+	left: -25px;
+}
+
+.startPageLeft
+{
+	display: block;
+	opacity: 1;
+}
+
+.newGameMenu
+{
+	display: none;
+	opacity: 0;
+}
+
+.startPageLeftLogo
+{
+	opacity: 0;
+	display: block;
+	transition: 1s all;
+}
+
+.startLoad
+{
+	display: block;
+	opacity: 0;
+	transition: 0.3s all;
+}
+
+.startPageMenu
+{
+	display: block;
+	opacity: 1;
+	left: -50vw;
+}
+
+.newGameMenu .info
+{
+  position: absolute;
+  bottom: 0;
+  right: calc(430px - 50vw);
+  width: 300px;
+  /*background-color: red;*/
+  height: 100px;
+}
+
+.infoIcon
+{
+  margin-top: 25px;
+  height: 55%;
+  margin-right: 25px;
+  float: right;
+}
+
+#startGameButton
+{
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  line-height: 70px;
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  bottom: -100px;
+  left: calc(50% - 50px);
+  /*background-color: red;*/
+}
+
+.startButtonGun
+{
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  opacity: 0;
+  display: block;
+  transition: 0.5s all;
+}
+
+.startButtonGunRight
+{
+  right: 0;
+}
+.startButtonGunLeft
+{
+  left: 0;
+}
+
+#startGameButton:hover .startButtonGunRight
+{
+  opacity: 1;
+  right: -75px;
+}
+
+#startGameButton:hover .startButtonGunLeft
+{
+  opacity: 1;
+  left: -75px;
+}
+
+.bullet
+{
+  width: 10px;
+  position: absolute;
+  top: 20px;
+  background-color: white;
+  height: 5px;
+  display: none;
+  transition: 3s all;
+}
+
+.bulletRight
+{
+  right: -66px;
+  border-radius: 0 10px 10px 0;
+  transition: 4s all;
+}
+
+.bulletLeft
+{
+  left: -66px;
+  transition: 4s all;
+  border-radius: 10px 0 0 10px;
+}
+
+.mainGameLoading
+{
+  opacity: 0;
+  display: none;
+  color: white;
+  transition: 2s all;
+  width: 500px;
+  height: 100%;
+  position: absolute;
+  left: calc(50% - 250px);
+}
+
+.mainGameLoadingTitle
+{
+  width: 400px;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+}
+
+.mainGameLoading .loadingImg
+{
+  width: 100px;
+  animation-name: loading;
+  animation-duration: 2s;
+  position: absolute;
+
+  bottom: 150px;
+  left: calc(50% - 50px);
+  animation-iteration-count: infinite;
+}
+
+.mainGameLoadingText
+{
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 100px;
+}
