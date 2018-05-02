@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mafia | Gamza</title>
+		<link rel="stylesheet" href="css/startPageStyle.css">
+		<link rel="stylesheet" href="css/gameStyle.css">
+		<link href="http://nrkk.ru/mafia/src/common/icon.png" rel="shortcut icon">
+		<link rel="apple-touch-icon" href="http://nrkk.ru/mafia/src/common/icon.png">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			var loaded = 0
+		</script>
+		<script type='text/javascript' src="script/loadingScript.js"></script>
+	</head>
+
+	<body>
+		<div class="startPage">
+			<div class="startPageLeft">
+				<img class="logo startPageLeftLogo" src="src/startPage/logo.png">
+				<div class="startLoad">
+					<img src="src/startPage/loading.png">
+					<p>Loading...</p>
+				</div>
+				<div class="startPageMenu">
+					<img class="startMenuButtonHoverLine smbHoverLine1" src="src/startPage/startMenuHoverLine.png">
+					<img class="startMenuButtonHoverLine smbHoverLine2" src="src/startPage/startMenuHoverLine.png">
+					<img class="startMenuButtonHoverLine smbHoverLine3" src="src/startPage/startMenuHoverLine.png">
+					<div class="startMenuButton startButton1" id="startMenuButton1" onmouseover="mouselog(event)" onmouseout="mouselog(event)">New game</div>
+					<div class="startMenuButton startButton2" id="startMenuButton2" onmouseover="mouselog(event)" onmouseout="mouselog(event)">Continue</div>
+					<div class="startMenuButton startButton3" id="startMenuButton3" onmouseover="mouselog(event)" onmouseout="mouselog(event)">Exit</div>
+				</div>
+			</div>
+			<div class="newGameMenu">
+				<div class="newGameMenuWindow">
+					<div class="title">
+						<div class="titleText">New game</div>
+						<div class="backButton newGameMenuButton" id="backToMainMenu">
+							<img src="src/startPage/blackArrowBack.png">
+							<p>Back</p>
+						</div>
+					</div>
+					<div id="startGameButton">
+						<p>Start<p>
+						<img class="startButtonGun startButtonGunRight" src="src/startPage/startButtonGunRight.png">
+						<img class="startButtonGun startButtonGunLeft" src="src/startPage/startButtonGunLeft.png">
+						<div class="bullet bulletRight"></div>
+						<div class="bullet bulletLeft"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mainGameLoading">
+			<img class="mainGameLoadingTitle" src="src/startPage/logo.png">
+			<img class="loadingImg" src="src/startPage/loading.png">
+			<p class="mainGameLoadingText">Loading...</p>
+		</div>
+		<script type='text/javascript' src="script/startPageScript.js"></script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
